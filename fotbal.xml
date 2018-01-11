@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+
+<football>
+
+<facts>
+	<player>
+	
+		<name>Cristiano Ronaldo</name>
+		<team>Real Madrid</team>
+		<gender>male</gender>
+		<age>32</age>
+		<golden_ball>5</golden_ball>		
+		
+	</player>
+	
+	<player>
+		
+		<name>Lionel Messi</name>
+		<team>Barcelona</team>
+		<gender>male</gender>
+		<age>30</age>
+		<golden_ball>5</golden_ball>
+		
+	</player>
+	
+	<player>
+	
+		<name>Marco Van Basten</name>
+		<team>no_team</team>
+		<gender>male</gender>
+		<age>53</age>
+		<golden_ball>2</golden_ball>
+	
+	</player>
+	
+	<player>
+	
+		<name>Kaka</name>
+		<team>Orlando City</team>
+		<gender>male</gender>
+		<age>35</age>
+		<golden_ball>1</golden_ball>
+	
+	</player>
+	
+	<player>
+	
+		<name>Luis Figo</name>
+		<team>no_team</team>
+		<gender>male</gender>
+		<age>45</age>
+		<golden_ball>1</golden_ball>
+	
+	</player>
+	
+	<player>
+	
+		<name>Fabio Cannavaro</name>
+		<team>no_team</team>
+		<gender>male</gender>
+		<age>44</age>
+		<golden_ball>1</golden_ball>
+	
+	</player>
+	
+	<player>
+	
+		<name>Marta</name>
+		<team>Orlando Pride</team>
+		<gender>female</gender>
+		<age>31</age>
+		<golden_ball>5</golden_ball>
+	
+	</player>
+	
+	<player>
+		
+		<name>Lieke Martens</name>
+		<team>Barcelona</team>
+		<gender>female</gender>
+		<age>25</age>
+		<golden_ball>1</golden_ball>
+	
+	</player>
+	
+	<player>
+		
+		<name>Mia Hamm</name>
+		<team>no_team</team>
+		<gender>female</gender>
+		<age>45</age>
+		<golden_ball>2</golden_ball>
+	
+	</player>
+	
+	<player>
+		
+		<name>Brigit Prinz</name>
+		<team>no_team</team>
+		<gender>female</gender>
+		<age>40</age>
+		<golden_ball>3</golden_ball>
+	
+	</player>	
+	
+	<player>
+		
+		<name>Carli Lloyd</name>
+		<team>Huston Dash</team>
+		<gender>female</gender>
+		<age>35</age>
+		<golden_ball>2</golden_ball>
+	
+	</player>
+	
+
+</facts>
+
+<rules>
+
+	<rule1>
+		
+		<if>
+			<who>player</who>
+			<has>
+				<what>golden_ball</what>
+				<how>greater</how>
+				<than>3</than>
+				<op>and</op>
+				<what>gender</what>
+				<is>male</is>
+			</has>
+			
+		</if>
+		
+		<then>
+			
+			<who>player</who>
+			<is>Top male player of all times</is>
+		</then>
+	
+	</rule1>
+
+	<rule2>
+		
+		<if>
+			<who>player</who>
+			<has>
+				<what>golden_ball</what>
+				<how>greater</how>
+				<than>3</than>
+				<op>and</op>
+				<what>gender</what>
+				<is>female</is>
+			</has>
+			
+		</if>
+		
+		<then>
+			
+			<who>player</who>
+			<is>Top female player of all times</is>
+		</then>
+	
+	</rule2>
+	
+	<rule3>
+		
+		<if>
+			<who>player</who>
+			<has>
+			
+			
+			
+			</has>
+			
+		</if>
+		
+		<then>
+			
+			<who>player</who>
+			<is></is>
+		</then>
+	
+	</rule3>
+
+</rules>
+
+
+</football>

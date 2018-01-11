@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Tema SBC</title>
+</head>
+<body>
+<script type="text/javascript">
+function test(){
+	alert("Merge!");
+}
+
+</script>
+<select onchange="test()">
+<th:block th:each="x:${ceva}">
+	<option><th:block th:text="${x}"/></option>
+	<option>1</option>
+</th:block>
+</select>
+</body>
+</html>

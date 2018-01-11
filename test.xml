@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<movies>
+<series>
+<!-- 	<staff id="1001">
+		<firstname>yong</firstname>
+		<lastname>mook kim</lastname>
+		<nickname>mkyong</nickname>
+		<salary>100000</salary>
+	</staff>
+	<staff id="2001">
+		<firstname>low</firstname>
+		<lastname>yin fong</lastname>
+		<nickname>fong fong</nickname>
+		<salary>200000</salary>
+	</staff> -->
+	
+	<serial>
+	
+		<name>House of Cards</name>
+		<producer>Netflix</producer>
+		<genere>drama</genere>
+		<status>ongoing</status>
+		<rating>8.9</rating>
+		<episodes>78</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Stranger Things</name>
+		<producer>Netflix</producer>
+		<genere>fantasy</genere>
+		<status>ongoing</status>
+		<rating>9</rating>
+		<episodes>17</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Narcos</name>
+		<producer>Netflix</producer>
+		<genere>crime</genere>
+		<status>ongoing</status>
+		<rating>8.9</rating>
+		<episodes>30</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Daredevil</name>
+		<producer>Netflix</producer>
+		<genere>drama</genere>
+		<status>ongoing</status>
+		<rating>8.9</rating>
+		<episodes>28</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Marco Polo</name>
+		<producer>Netflix</producer>
+		<genere>drama</genere>
+		<status>finished</status>
+		<rating>8.9</rating>
+		<episodes>19</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Bosch</name>
+		<producer>Amazon Prime</producer>
+		<genere>crima</genere>
+		<status>ongoing</status>
+		<rating>8.3</rating>
+		<episodes>40</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Hand of God</name>
+		<producer>Amazon Prime</producer>
+		<genere>drama</genere>
+		<status>finished</status>
+		<rating>7.5</rating>
+		<episodes>20</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Alpha House</name>
+		<producer>Amazon Prime</producer>
+		<genere>comedy</genere>
+		<status>ongoing</status>
+		<rating>7.6</rating>
+		<episodes>21</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>The Grand Tour</name>
+		<producer>Amazon Prime</producer>
+		<genere>comedy</genere>
+		<status>ongoing</status>
+		<rating>8.8</rating>
+		<episodes>37</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Whishenproof</name>
+		<producer>Amazon Prime</producer>
+		<genere>fantasy</genere>
+		<status>ongoing</status>
+		<rating>6.7</rating>
+		<episodes>27</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Transparent</name>
+		<producer>Amazon Prime</producer>
+		<genere>comedy</genere>
+		<status>ongoing</status>
+		<rating>7.8</rating>
+		<episodes>41</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>The Wire</name>
+		<producer>HBO</producer>
+		<genere>crime</genere>
+		<status>finished</status>
+		<rating>9.3</rating>
+		<episodes>60</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Game of Thrones</name>
+		<producer>HBO</producer>
+		<genere>fantasy</genere>
+		<status>ongoing</status>
+		<rating>9.5</rating>
+		<episodes>61</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>The Sopranos</name>
+		<producer>HBO</producer>
+		<genere>drama</genere>
+		<status>finished</status>
+		<rating>9.2</rating>
+		<episodes>86</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>OZ</name>
+		<producer>HBO</producer>
+		<genere>drama</genere>
+		<status>finished</status>
+		<rating>8.8</rating>
+		<episodes>56</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Veep</name>
+		<producer>HBO</producer>
+		<genere>comedy</genere>
+		<status>ongoing</status>
+		<rating>8.2</rating>
+		<episodes>58</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Entourage</name>
+		<producer>HBO</producer>
+		<genere>comedy</genere>
+		<status>finished</status>
+		<rating>8.5</rating>
+		<episodes>96</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Nearly Departed</name>
+		<producer>Hulu</producer>
+		<genere>drama</genere>
+		<status>finished</status>
+		<rating>7.9</rating>
+		<episodes>245</episodes>
+		
+	</serial>
+	
+	<serial>
+	
+		<name>Castle</name>
+		<producer>Hulu</producer>
+		<genere>crime</genere>
+		<status>finished</status>
+		<rating>8.2</rating>
+		<episodes>173</episodes>
+		
+	</serial>
+	
+</series>
+	
+<actors>
+
+	<actor></actor>
+	<series>House of Cards</series>
+	
+	
+
+</actors>
+
+<rules>
+		
+	<rule>
+				
+			
+	</rule>
+	
+</rules>
+</movies>
