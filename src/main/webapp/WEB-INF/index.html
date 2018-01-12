@@ -7,15 +7,25 @@
 </head>
 <body>
 <script type="text/javascript">
-function test(){
-	alert("Merge!");
+
+
+function rule1(){
+	var e = document.getElementById("player");
+	var selPlayer = e.options[e.selectedIndex].value;
+	location.href=document.URL+"?rule1="+selPlayer;
 }
 
 </script>
-<select onchange="test()">
+<select id="player">
 <th:block th:each="p:${players}">
-	<option th:value="${p}"><th:block th:text="${p}"/></option>
+	<option th:value="${p.name}"><th:block th:text="${p.name}"/></option>
 </th:block>
 </select>
+<br/><br/>
+<div>
+
+<button onclick="rule1()">Rule1</button>
+</div>
+
 </body>
 </html>

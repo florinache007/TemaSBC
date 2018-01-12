@@ -1,4 +1,4 @@
-package com.tema;
+package com.tema.parser;
 
 import java.io.File;
 import java.io.IOException;
