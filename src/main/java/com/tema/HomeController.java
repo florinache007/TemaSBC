@@ -1,6 +1,7 @@
 package com.tema;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -21,9 +22,11 @@ public class HomeController {
 	public String home(ModelMap model) throws ParserConfigurationException, SAXException, IOException {
 		ReadXMLFile read = new ReadXMLFile();
 		
-		Document d = read.parseXML("C:\\Users\\Florin\\Desktop\\tema_2@sbc\\TemaSBC\\fotbal.xml");
+		Document d = read.parseXML("fotbal.xml");
 		
 		NodeList nList = d.getElementsByTagName("player");
+		
+		ArrayList<String> players = new ArrayList<>();
 		
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 
@@ -33,15 +36,14 @@ public class HomeController {
 			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
 				Element eElement = (Element) nNode;
-
-				System.out.println("Staff id : " + eElement.getAttribute("player"));
-				System.out.println("First Name : " + eElement.getElementsByTagName("name").item(0).getTextContent());
-				System.out.println("Last Name : " + eElement.getElementsByTagName("gender").item(0).getTextContent());
+				players.add(eElement.getElementsByTagName("name").item(0).getTextContent());
+				System.out.println("Name : " + eElement.getElementsByTagName("name").item(0).getTextContent());
+				System.out.println("Gender : " + eElement.getElementsByTagName("gender").item(0).getTextContent());
 
 			}
 		}
 		
-		model.addAttribute("ceva","ceva");
+		model.addAttribute("players",players);
 		return "index";
 	}
 

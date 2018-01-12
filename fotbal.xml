@@ -118,7 +118,7 @@
 
 <rules>
 
-	<rule1>
+	<rule>
 		
 		<if>
 			<who>player</who>
@@ -139,9 +139,9 @@
 			<is>Top male player of all times</is>
 		</then>
 	
-	</rule1>
+	</rule>
 
-	<rule2>
+	<rule>
 		
 		<if>
 			<who>player</who>
@@ -162,9 +162,9 @@
 			<is>Top female player of all times</is>
 		</then>
 	
-	</rule2>
+	</rule>
 	
-	<rule3>
+	<rule>
 		
 		<if>
 			<who>player</who>
@@ -182,7 +182,7 @@
 			<is></is>
 		</then>
 	
-	</rule3>
+	</rule>
 
 </rules>
 

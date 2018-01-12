@@ -13,9 +13,8 @@ function test(){
 
 </script>
 <select onchange="test()">
-<th:block th:each="x:${ceva}">
-	<option><th:block th:text="${x}"/></option>
-	<option>1</option>
+<th:block th:each="p:${players}">
+	<option th:value="${p}"><th:block th:text="${p}"/></option>
 </th:block>
 </select>
 </body>
