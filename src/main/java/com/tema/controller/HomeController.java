@@ -109,6 +109,11 @@ public class HomeController {
 			model.addAttribute("rule3",theRules.rule3(request.getParameter("rule3"),rules,players));
 		}
 		
+		//Rule 4
+		if(request.getParameter("rule4") != null){
+			model.addAttribute("rule4",theRules.rule4(request.getParameter("rule4"),rules,players));
+		}
+		
 		return "index";
 	}
 	

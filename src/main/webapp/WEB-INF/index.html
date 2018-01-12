@@ -27,6 +27,12 @@ function rule3(){
 	location.href="/?rule3="+selPlayer;
 }
 
+function rule4(){
+	var e = document.getElementById("player");
+	var selPlayer = e.options[e.selectedIndex].value;
+	location.href="/?rule4="+selPlayer;
+}
+
 </script>
 <th:block th:if="${rule1 != null}">
 <br/>
@@ -48,6 +54,14 @@ function rule3(){
 <br/>
 
 	<b><th:block th:text="${rule3}"/></b>
+
+<br/><br/>
+</th:block>
+
+<th:block th:if="${rule4 != null}">
+<br/>
+
+	<b><th:block th:text="${rule4}"/></b>
 
 <br/><br/>
 </th:block>
@@ -75,5 +89,10 @@ function rule3(){
 	<button onclick="rule3()">Rule 3</button>
 </div>
 
+<br/>
+
+<div>
+	<button onclick="rule4()">Rule 4</button>
+</div>
 </body>
 </html>

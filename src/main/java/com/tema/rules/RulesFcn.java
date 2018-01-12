@@ -111,7 +111,7 @@ public class RulesFcn {
 		
 		if(r.getWhat1().equals("golden_ball")){
 			if(r.getHow1().equals("greater_eq")){
-				System.out.println();
+			
 				if(Integer.parseInt(p.getGoldenBall()) >= Integer.parseInt(r.getThan1())){
 					test1 = true;
 				}
@@ -129,6 +129,53 @@ public class RulesFcn {
 		
 		if(test1 && test2)
 			return p.getName()+" is a "+r.getIs()+"!";
+		return null;
+	}
+	
+	
+	public String rule4(String player,ArrayList<Rule> rules, ArrayList<Player> players) {
+		Rule r = null;
+		for(Rule r4:rules){
+			if(r4.getRule_nr() == 4){
+				
+				r = r4;
+				
+			}
+		}
+		
+		Player p = null;
+		for(Player p1 : players){
+			if(p1.getName().equals(player)){
+				p=p1;
+			}
+		}
+		
+		boolean test1 = false;
+		boolean test2 = false;
+		
+		if(r.getWhat1().equals("golden_ball")){
+			if(r.getHow1().equals("greater_eq")){
+				
+				if(Integer.parseInt(p.getGoldenBall()) >= Integer.parseInt(r.getThan1())){
+					test1 = true;
+				}
+				
+			}
+		}
+		if(r.getWhat2().equals("team")){
+			
+			if(r.getHow2().equals("differs")){
+				
+				if(!p.getTeam().equals(r.getThan2())) {
+					test2 = true;
+				}
+			}
+		}
+		
+		if(test1 && test2) {
+			
+			return p.getName()+" "+r.getIs()+" "+p.getTeam()+"!";
+		}
 		return null;
 	}
 
