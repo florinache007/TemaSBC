@@ -22,6 +22,7 @@ import org.xml.sax.SAXException;
 import com.tema.model.Player;
 import com.tema.model.Rule;
 import com.tema.parser.ReadXMLFile;
+import com.tema.rules.RulesFcn;
 
 @Controller
 public class HomeController {
@@ -88,49 +89,25 @@ public class HomeController {
 		
 		
 		model.addAttribute("players",players);
-		model.addAttribute("rules", rules);
+
 		
+		RulesFcn theRules = new RulesFcn();
 		
 		//Rule 1
 		if(request.getParameter("rule1") != null){
-			Rule r = null;
-			for(Rule r1:rules){
-				if(r1.getRule_nr() == 1){
-					
-					r = r1;
-					
-				}
-			}
-			
-			Player p = null;
-			for(Player p1 : players){
-				if(p1.getName().equals(request.getParameter("rule1"))){
-					p=p1;
-				}
-			}
-			
-			boolean test1 = false;
-			boolean test2 = false;
-			
-			if(r.getWhat1().equals("golden_ball")){
-				if(r.getHow1().equals("greater")){
-					if(Integer.parseInt(p.getGoldenBall()) > Integer.parseInt(r.getThan1())){
-						test1 = true;
-					}
-					
-				}
-			}
-			if(r.getWhat2().equals("gender")){
-				if(r.getHow2().equals("equals")){
-					if(p.getGender().equals(r.getThan2()))
-						test2 = true;
-				}
-			}
-			
-			if(test1 && test2)
-				model.addAttribute("rule1", p.getName()+" is one of the "+r.getIs()+"!");
+			model.addAttribute("rule1",theRules.rule1(request.getParameter("rule1"),rules,players));
 		}
 		
+		
+		//Rule 2
+		if(request.getParameter("rule2") != null){
+			model.addAttribute("rule2",theRules.rule2(request.getParameter("rule2"),rules,players));
+		}
+		
+		//Rule 3
+		if(request.getParameter("rule3") != null){
+			model.addAttribute("rule3",theRules.rule3(request.getParameter("rule3"),rules,players));
+		}
 		
 		return "index";
 	}

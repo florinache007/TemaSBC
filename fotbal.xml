@@ -166,14 +166,21 @@
 	
 	</rule>
 	
-	<!-- <rule>
+    <rule>
+		
+		<rule_nr>3</rule_nr>
 		
 		<if>
 			<who>player</who>
 			<has>
-			
-			
-			
+				<what>golden_ball</what>
+				<how>greater_eq</how>
+				<than>1</than>
+				<op>and</op>
+				<what>team</what>
+				<how>equals</how>
+				<than>no_team</than>
+				
 			</has>
 			
 		</if>
@@ -181,11 +188,38 @@
 		<then>
 			
 			<who>player</who>
-			<is></is>
+			<is>retired player</is>
 		</then>
 	
-	</rule> -->
-
+	</rule>
+	
+	
+	<rule>
+		
+		<rule_nr>4</rule_nr>
+		
+		<if>
+			<who>player</who>
+			<has>
+				<what>golden_ball</what>
+				<how>greater_eq</how>
+				<than>1</than>
+				<op>and</op>
+				<what>team</what>
+				<how>differs</how>
+				<than>no_team</than>
+				
+			</has>
+			
+		</if>
+		
+		<then>
+			
+			<who>player</who>
+			<is>plays for</is>
+		</then>
+	
+	</rule>
 </rules>
 
 

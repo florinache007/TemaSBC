@@ -3,28 +3,56 @@
     xmlns:th="http://www.thymeleaf.org" >
 <head>
 
-
-
 <meta charset="ISO-8859-1"/>
 <title>Tema SBC</title>
 </head>
 <body>
 <script type="text/javascript">
-$(document).ready(function() {
-    alert( "ready!" );
-});
+
 function rule1(){
 	var e = document.getElementById("player");
 	var selPlayer = e.options[e.selectedIndex].value;
 	location.href="/?rule1="+selPlayer;
 }
 
+function rule2(){
+	var e = document.getElementById("player");
+	var selPlayer = e.options[e.selectedIndex].value;
+	location.href="/?rule2="+selPlayer;
+}
+
+function rule3(){
+	var e = document.getElementById("player");
+	var selPlayer = e.options[e.selectedIndex].value;
+	location.href="/?rule3="+selPlayer;
+}
+
 </script>
-<br/><br/>
+<th:block th:if="${rule1 != null}">
+<br/>
 
-<b><th:block th:text="${rule1}"/></b>
+	<b><th:block th:text="${rule1}"/></b>
 
 <br/><br/>
+</th:block>
+
+<th:block th:if="${rule2 != null}">
+<br/>
+
+	<b><th:block th:text="${rule2}"/></b>
+
+<br/><br/>
+</th:block>
+
+<th:block th:if="${rule3 != null}">
+<br/>
+
+	<b><th:block th:text="${rule3}"/></b>
+
+<br/><br/>
+</th:block>
+
+
 <select id="player">
 <th:block th:each="p:${players}">
 	<option th:value="${p.name}"><th:block th:text="${p.name}"/></option>
@@ -32,8 +60,19 @@ function rule1(){
 </select>
 <br/><br/>
 <div>
+	<button onclick="rule1()">Rule 1</button>
+</div>
 
-<button onclick="rule1()">Rule1</button>
+<br/>
+
+<div>
+	<button onclick="rule2()">Rule 2</button>
+</div>
+
+<br/>
+
+<div>
+	<button onclick="rule3()">Rule 3</button>
 </div>
 
 </body>
