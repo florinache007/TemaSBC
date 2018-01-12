@@ -2,20 +2,29 @@
  <html xmlns="http://www.w3.org/1999/xhtml" 
     xmlns:th="http://www.thymeleaf.org" >
 <head>
+
+
+
 <meta charset="ISO-8859-1"/>
 <title>Tema SBC</title>
 </head>
 <body>
 <script type="text/javascript">
-
-
+$(document).ready(function() {
+    alert( "ready!" );
+});
 function rule1(){
 	var e = document.getElementById("player");
 	var selPlayer = e.options[e.selectedIndex].value;
-	location.href=document.URL+"?rule1="+selPlayer;
+	location.href="/?rule1="+selPlayer;
 }
 
 </script>
+<br/><br/>
+
+<b><th:block th:text="${rule1}"/></b>
+
+<br/><br/>
 <select id="player">
 <th:block th:each="p:${players}">
 	<option th:value="${p.name}"><th:block th:text="${p.name}"/></option>

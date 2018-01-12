@@ -49,7 +49,7 @@ public class HomeController {
 				p.setAge(Integer.parseInt(eElement.getElementsByTagName("age").item(0).getTextContent()));
 				p.setGender(eElement.getElementsByTagName("gender").item(0).getTextContent());
 				p.setTeam(eElement.getElementsByTagName("team").item(0).getTextContent());
-				p.setGoldenBall(Integer.parseInt(eElement.getElementsByTagName("golden_ball").item(0).getTextContent()));
+				p.setGoldenBall(eElement.getElementsByTagName("golden_ball").item(0).getTextContent());
 				players.add(p);
 				
 
@@ -90,6 +90,8 @@ public class HomeController {
 		model.addAttribute("players",players);
 		model.addAttribute("rules", rules);
 		
+		
+		//Rule 1
 		if(request.getParameter("rule1") != null){
 			Rule r = null;
 			for(Rule r1:rules){
@@ -102,11 +104,31 @@ public class HomeController {
 			
 			Player p = null;
 			for(Player p1 : players){
-				if(p1.getName() == request.getParameter("rule1"))
+				if(p1.getName().equals(request.getParameter("rule1"))){
 					p=p1;
+				}
 			}
 			
+			boolean test1 = false;
+			boolean test2 = false;
 			
+			if(r.getWhat1().equals("golden_ball")){
+				if(r.getHow1().equals("greater")){
+					if(Integer.parseInt(p.getGoldenBall()) > Integer.parseInt(r.getThan1())){
+						test1 = true;
+					}
+					
+				}
+			}
+			if(r.getWhat2().equals("gender")){
+				if(r.getHow2().equals("equals")){
+					if(p.getGender().equals(r.getThan2()))
+						test2 = true;
+				}
+			}
+			
+			if(test1 && test2)
+				model.addAttribute("rule1", p.getName()+" is one of the "+r.getIs()+"!");
 		}
 		
 		

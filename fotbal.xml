@@ -137,7 +137,7 @@
 		<then>
 			
 			<who>player</who>
-			<is>Top male player of all times</is>
+			<is>top male players of all times</is>
 		</then>
 	
 	</rule>
@@ -161,7 +161,7 @@
 		<then>
 			
 			<who>player</who>
-			<is>Top female player of all times</is>
+			<is>top female players of all times</is>
 		</then>
 	
 	</rule>

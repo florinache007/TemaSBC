@@ -6,7 +6,7 @@ public class Player {
 	private String team;
 	private int age;
 	private String gender;
-	private int goldenBall;
+	private String goldenBall;
 	
 	
 	
@@ -34,10 +34,10 @@ public class Player {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public int getGoldenBall() {
+	public String getGoldenBall() {
 		return goldenBall;
 	}
-	public void setGoldenBall(int goldenBall) {
+	public void setGoldenBall(String goldenBall) {
 		this.goldenBall = goldenBall;
 	}
 
