@@ -11,7 +11,14 @@ public class Rule {
 	private String op;
 	private String is;
 	private int rule_nr;
+	private String who;
 	
+	public String getWho() {
+		return who;
+	}
+	public void setWho(String who) {
+		this.who = who;
+	}
 	public int getRule_nr() {
 		return rule_nr;
 	}
@@ -66,5 +73,6 @@ public class Rule {
 	public void setIs(String is) {
 		this.is = is;
 	}
+	
 
 }

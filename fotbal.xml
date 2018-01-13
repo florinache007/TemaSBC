@@ -55,6 +55,16 @@
 	
 	<player>
 	
+		<name>Zinedine Zidane</name>
+		<team>no_team</team>
+		<gender>male</gender>
+		<age>45</age>
+		<golden_ball>1</golden_ball>
+	
+	</player>
+	
+	<player>
+	
 		<name>Fabio Cannavaro</name>
 		<team>no_team</team>
 		<gender>male</gender>
@@ -112,6 +122,12 @@
 		<golden_ball>2</golden_ball>
 	
 	</player>
+	
+	<manager>
+		<name>Zinedine Zidane</name>
+		<team>Real Madrid</team>
+		<football_gender>male</football_gender>
+	</manager>
 	
 
 </facts>
@@ -217,6 +233,61 @@
 			
 			<who>player</who>
 			<is>plays for</is>
+		</then>
+	
+	</rule>
+	
+		<rule>
+		
+		<rule_nr>5</rule_nr>
+		
+		<if>
+			<who>team</who>
+			<has>
+				<what>manager</what>
+				<how>equals</how>
+				<than>player</than>
+				<op>and</op>
+				<what>football_gender</what>
+				<how>equals</how>
+				<than>gender</than>
+				
+			</has>
+			
+		</if>
+		
+		<then>
+			
+			<who>manager</who>
+			<is>coach for player</is>
+		</then>
+	
+	</rule>
+	
+	
+	<rule>
+		
+		<rule_nr>6</rule_nr>
+		
+		<if>
+			<who>name</who>
+			<has>
+				<what>manager</what>
+				<how>equals</how>
+				<than>player</than>
+				<op>and</op>
+				<what>golden_ball</what>
+				<how>greater_eq</how>
+				<than>1</than>
+				
+			</has>
+			
+		</if>
+		
+		<then>
+			
+			<who>manager</who>
+			<is>a manager who've won the golden ball</is>
 		</then>
 	
 	</rule>

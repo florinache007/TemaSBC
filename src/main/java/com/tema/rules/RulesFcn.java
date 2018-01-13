@@ -2,6 +2,7 @@ package com.tema.rules;
 
 import java.util.ArrayList;
 
+import com.tema.model.Manager;
 import com.tema.model.Player;
 import com.tema.model.Rule;
 
@@ -175,6 +176,104 @@ public class RulesFcn {
 		if(test1 && test2) {
 			
 			return p.getName()+" "+r.getIs()+" "+p.getTeam()+"!";
+		}
+		return null;
+	}
+	
+	public String rule5(String player,ArrayList<Rule> rules, ArrayList<Player> players,ArrayList<Manager> managers) {
+		Rule r = null;
+		for(Rule r5:rules){
+			if(r5.getRule_nr() == 5){
+				
+				r = r5;
+				
+			}
+		}
+		
+		
+			
+		
+		
+		Manager m = null;
+		for(Manager m1 : managers){
+			if(m1.getName().equals(player)){
+				m=m1;
+			}
+		}
+		
+		boolean test1 = false;
+		boolean test2 = false;
+		
+		
+	for(Player p : players){
+		if(r.getWho().equals("team")) {
+			
+			if(r.getWhat1().equals("manager") && r.getThan1().equals("player"))
+				if(m.getTeam().equals(p.getTeam())) {
+					test1 = true;
+					
+				}
+			if(r.getWhat2().equals("football_gender") && r.getThan2().equals("gender"))
+				if(m.getFootball_gender().equals(p.getGender())) {
+					test2 = true;
+					
+				}
+			
+		}
+		
+		if(test1 && test2) {
+			return m.getName()+" is the coach of "+p.getName()+" at "+m.getTeam()+"!";
+		}
+		}
+		return null;
+	}
+	
+	
+	public String rule6(String player,ArrayList<Rule> rules, ArrayList<Player> players,ArrayList<Manager> managers) {
+		Rule r = null;
+		for(Rule r6:rules){
+			if(r6.getRule_nr() == 6){
+				
+				r = r6;
+				
+			}
+		}
+		
+		
+			
+		
+		
+		Manager m = null;
+		for(Manager m1 : managers){
+			if(m1.getName().equals(player)){
+				m=m1;
+			}
+		}
+		
+		boolean test1 = false;
+		boolean test2 = false;
+		
+		
+	for(Player p : players){
+		if(r.getWho().equals("name")) {
+			
+			if(r.getWhat1().equals("manager") && r.getThan1().equals("player"))
+				if(m.getName().equals(p.getName())) {
+					System.out.println("ceva");
+					test1 = true;
+					
+				}
+			if(r.getWhat2().equals("golden_ball"))
+				if(Integer.parseInt(p.getGoldenBall()) >= 1) {
+					test2 = true;
+					
+				}
+			
+		}
+		
+		if(test1 && test2) {
+			return m.getName()+" is "+r.getIs()+"!";
+		}
 		}
 		return null;
 	}

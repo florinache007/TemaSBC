@@ -33,6 +33,18 @@ function rule4(){
 	location.href="/?rule4="+selPlayer;
 }
 
+function rule5(){
+	var e = document.getElementById("manager");
+	var selPlayer = e.options[e.selectedIndex].value;
+	location.href="/?rule5="+selPlayer;
+}
+
+function rule6(){
+	var e = document.getElementById("manager");
+	var selPlayer = e.options[e.selectedIndex].value;
+	location.href="/?rule6="+selPlayer;
+}
+
 </script>
 <th:block th:if="${rule1 != null}">
 <br/>
@@ -94,5 +106,38 @@ function rule4(){
 <div>
 	<button onclick="rule4()">Rule 4</button>
 </div>
+
+<br/>
+
+<th:block th:if="${rule5 != null}">
+<br/>
+
+	<b><th:block th:text="${rule5}"/></b>
+
+<br/><br/>
+</th:block>
+
+<th:block th:if="${rule6 != null}">
+<br/>
+
+	<b><th:block th:text="${rule6}"/></b>
+
+<br/><br/>
+</th:block>
+
+<select id="manager">
+<th:block th:each="m:${managers}">
+	<option th:value="${m.name}"><th:block th:text="${m.name}"/></option>
+</th:block>
+</select>
+<br/><br/>
+<div>
+	<button onclick="rule5()">Rule 5</button>
+</div>
+<br/>
+<div>
+	<button onclick="rule6()">Rule 6</button>
+</div>
+
 </body>
 </html>

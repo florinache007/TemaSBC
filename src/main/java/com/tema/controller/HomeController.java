@@ -19,6 +19,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.tema.model.Manager;
 import com.tema.model.Player;
 import com.tema.model.Rule;
 import com.tema.parser.ReadXMLFile;
@@ -80,6 +81,9 @@ public class HomeController {
 				r.setThan2(eElement.getElementsByTagName("than").item(1).getTextContent());
 				r.setWhat1(eElement.getElementsByTagName("what").item(0).getTextContent());
 				r.setWhat2(eElement.getElementsByTagName("what").item(1).getTextContent());
+				r.setWho(eElement.getElementsByTagName("who").item(0).getTextContent());
+				
+				
 				
 				rules.add(r);
 				
@@ -87,8 +91,33 @@ public class HomeController {
 			}
 		}
 		
+
+		NodeList nList3 = d.getElementsByTagName("manager");
+		
+		ArrayList<Manager> managers = new ArrayList<>();
+		
+		for (int temp = 0; temp < nList3.getLength(); temp++) {
+			
+			
+			
+			Node nNode = nList3.item(temp);
+			
+			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+				Manager m = new Manager();
+				Element eElement = (Element) nNode;
+				
+				m.setName(eElement.getElementsByTagName("name").item(0).getTextContent());
+				m.setTeam(eElement.getElementsByTagName("team").item(0).getTextContent());
+				m.setFootball_gender(eElement.getElementsByTagName("football_gender").item(0).getTextContent());
+				
+				managers.add(m);
+				
+			}
+		}
+		
 		
 		model.addAttribute("players",players);
+		model.addAttribute("managers", managers);
 
 		
 		RulesFcn theRules = new RulesFcn();
@@ -114,6 +143,18 @@ public class HomeController {
 			model.addAttribute("rule4",theRules.rule4(request.getParameter("rule4"),rules,players));
 		}
 		
+		//Rule 5
+		if(request.getParameter("rule5") != null){
+			model.addAttribute("rule5",theRules.rule5(request.getParameter("rule5"),rules,players,managers));
+		}
+		
+		
+		//Rule 6
+		if(request.getParameter("rule6") != null){
+			System.out.println(theRules.rule6(request.getParameter("rule6"),rules,players,managers));
+			model.addAttribute("rule6",theRules.rule6(request.getParameter("rule6"),rules,players,managers));
+		}
+				
 		return "index";
 	}
 	
