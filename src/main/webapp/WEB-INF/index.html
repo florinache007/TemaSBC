@@ -46,98 +46,120 @@ function rule6(){
 }
 
 </script>
-<th:block th:if="${rule1 != null}">
-<br/>
 
-	<b><th:block th:text="${rule1}"/></b>
-
-<br/><br/>
-</th:block>
-
-<th:block th:if="${rule2 != null}">
-<br/>
-
-	<b><th:block th:text="${rule2}"/></b>
-
-<br/><br/>
-</th:block>
-
-<th:block th:if="${rule3 != null}">
-<br/>
-
-	<b><th:block th:text="${rule3}"/></b>
-
-<br/><br/>
-</th:block>
-
-<th:block th:if="${rule4 != null}">
-<br/>
-
-	<b><th:block th:text="${rule4}"/></b>
-
-<br/><br/>
-</th:block>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+</style>
 
 
+
+<b>Players:  </b>
 <select id="player">
 <th:block th:each="p:${players}">
 	<option th:value="${p.name}"><th:block th:text="${p.name}"/></option>
 </th:block>
 </select>
 <br/><br/>
-<div>
-	<button onclick="rule1()">Rule 1</button>
-</div>
-
-<br/>
-
-<div>
-	<button onclick="rule2()">Rule 2</button>
-</div>
-
-<br/>
-
-<div>
-	<button onclick="rule3()">Rule 3</button>
-</div>
-
-<br/>
-
-<div>
-	<button onclick="rule4()">Rule 4</button>
-</div>
-
-<br/>
-
-<th:block th:if="${rule5 != null}">
-<br/>
-
-	<b><th:block th:text="${rule5}"/></b>
-
-<br/><br/>
-</th:block>
-
-<th:block th:if="${rule6 != null}">
-<br/>
-
-	<b><th:block th:text="${rule6}"/></b>
-
-<br/><br/>
-</th:block>
-
+<b>Managers: </b>
 <select id="manager">
 <th:block th:each="m:${managers}">
 	<option th:value="${m.name}"><th:block th:text="${m.name}"/></option>
 </th:block>
 </select>
+
 <br/><br/>
-<div>
-	<button onclick="rule5()">Rule 5</button>
-</div>
-<br/>
-<div>
-	<button onclick="rule6()">Rule 6</button>
-</div>
+
+<center>
+<table class="tg">
+	<thead>
+		<th>Rule</th>
+		<th>Rule content</th>
+		<th>Result</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td><div>
+				<button onclick="rule1()">Rule 1</button>
+			</div></td>
+			<td>A male who've won at least 3 golden globes is a top male player of all times.</td>
+			<td>
+				<th:block th:if="${rule1 != null}">
+					<b><th:block th:text="${rule1}"/></b>
+				</th:block>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><div>
+				<button onclick="rule2()">Rule 2</button>
+			</div></td>
+			<td>A woman who've won at least 3 golden globes is a top female player of all times.</td>
+			<td>
+				<th:block th:if="${rule2 != null}">
+					<b><th:block th:text="${rule2}"/></b>
+				</th:block>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><div>
+				<button onclick="rule3()">Rule 3</button>
+			</div></td>
+			<td>A player who has no team and has won at least 1 golden ball is a top retired player.</td>
+			<td>
+				<th:block th:if="${rule3 != null}">
+					<b><th:block th:text="${rule3}"/></b>
+				</th:block>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><div>
+				<button onclick="rule4()">Rule 4</button>
+			</div></td>
+			<td>A player that has a team and won at least 1 golden ball is a top player and plays for a team.</td>
+			<td>
+				<th:block th:if="${rule4 != null}">
+					<b><th:block th:text="${rule4}"/></b>
+				</th:block>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><div>
+				<button onclick="rule5()">Rule 5</button>
+			</div></td>
+			<td>See what player the manager coaches at the team.</td>
+			<td>
+				<th:block th:if="${rule5 != null}">
+					<b><th:block th:text="${rule5}"/></b>
+				</th:block>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><div>
+				<button onclick="rule6()">Rule 6</button>
+			</div></td>
+			<td>See if the manager is a former golden ball winner.</td>
+			<td>
+				<th:block th:if="${rule6 != null}">
+					<b><th:block th:text="${rule6}"/></b>
+				</th:block>
+			</td>
+		</tr>
+	
+	</tbody>
+
+
+
+</table>
+
+
+</center>
 
 </body>
 </html>

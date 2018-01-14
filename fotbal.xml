@@ -129,6 +129,25 @@
 		<football_gender>male</football_gender>
 	</manager>
 	
+	<manager>
+		<name>Marco Van Basten</name>
+		<team>AZ Alkmaar</team>
+		<football_gender>male</football_gender>
+	</manager>	
+	
+	<manager>
+		<name>Ernesto Valverde</name>
+		<team>Barcelona</team>
+		<football_gender>male</football_gender>
+	</manager>
+	
+	
+	<manager>
+		<name>Fran Sánchez</name>
+		<team>Barcelona</team>
+		<football_gender>female</football_gender>
+	</manager>
+	
 
 </facts>
 
@@ -204,7 +223,7 @@
 		<then>
 			
 			<who>player</who>
-			<is>retired player</is>
+			<is>top retired player</is>
 		</then>
 	
 	</rule>
